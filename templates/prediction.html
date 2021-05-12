@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Prediction Model{% endblock %}
+{% block head %}
+<h1>Predictive Model</h1>
+{% endblock %}
+{% block content %}
+<h2>Input Values to See Predictions</h2>
+<form action="#" method="post">
+    <p><hr></p>
+    <p>
+    Rainfall: <input type="number" name="rainfall" />(0 ~ 15 inches) |
+    Mean Temp: <input type="number" name="mean_temp" />(-7 ~ 22 degrees Celsius) |
+    Min Temp: <input type="number" name="min_temp" />(-12 ~ 16 degrees Celsius) |
+    Max Temp: <input type="number" name="max_temp" />(-3 ~ 28 degrees Celsius)
+    <input type="submit" value="Submit" />
+    </p>
+</form>
+<h3>{{ content }}</h3>
+<div class="row">
+    <div class="column">
+        <img src="{{ image1_name }}" alt="Chart 1" style="width:100%">
+    </div>
+    <div class="column">
+        <img src="{{ image2_name }}" alt="Chart 2" style="width:100%">
+    </div>
+</div>
+{% endblock %}
